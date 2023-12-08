@@ -4,8 +4,18 @@ function postMessage() {
 
     if (message.length > 0 && message.length <= 128) {
         const messageBoard = document.getElementById('message-board');
+        
+        // Create a new message div
         const newMessage = document.createElement('div');
-        newMessage.textContent = message;
+
+        // Get the current date and time
+        const timestamp = new Date();
+        const formattedTimestamp = timestamp.toLocaleString();
+
+        // Set the text content of the new message div to include the message and timestamp
+        newMessage.textContent = `${formattedTimestamp}: ${message}`;
+
+        // Insert the new message at the top of the message board
         messageBoard.insertBefore(newMessage, messageBoard.firstChild);
 
         // Clear the input field after posting
@@ -21,6 +31,14 @@ setInterval(function () {
     // For simplicity, this example adds a dummy message every 5 seconds
     const messageBoard = document.getElementById('message-board');
     const dummyMessage = document.createElement('div');
-    dummyMessage.textContent = 'New message!';
+
+    // Get the current date and time for the dummy message
+    const timestamp = new Date();
+    const formattedTimestamp = timestamp.toLocaleString();
+
+    // Set the text content of the dummy message div to include the timestamp
+    dummyMessage.textContent = `${formattedTimestamp}: New message!`;
+
+    // Insert the dummy message at the top of the message board
     messageBoard.insertBefore(dummyMessage, messageBoard.firstChild);
 }, 5000);
