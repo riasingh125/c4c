@@ -1,5 +1,5 @@
 # c4c
-index.html
+index.html \\
 app.js
 
 
