@@ -5,6 +5,10 @@ function postMessage() {
     if (message.length > 0 && message.length <= 128) {
         const messageBoard = document.getElementById('message-board');
 
+        // Get the selected color from the color picker
+        const colorPicker = document.getElementById('color-picker');
+        const selectedColor = colorPicker.value;
+
         // Create a new message div
         const newMessage = document.createElement('div');
 
@@ -14,6 +18,9 @@ function postMessage() {
 
         // Set the text content of the new message div to include the message and timestamp
         newMessage.textContent = `${formattedTimestamp}: ${message}`;
+
+        // Set the background color of the new message div
+        newMessage.style.backgroundColor = selectedColor;
 
         // Insert the new message at the top of the message board
         messageBoard.insertBefore(newMessage, messageBoard.firstChild);
