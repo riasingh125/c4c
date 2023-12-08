@@ -20,7 +20,7 @@ function postMessage() {
         newMessage.textContent = `${formattedTimestamp}: ${message}`;
 
         // Set the background color of the new message div
-        newMessage.style.backgroundColor = selectedColor;
+        newMessage.style.color = selectedColor;
 
         // Insert the new message at the top of the message board
         messageBoard.insertBefore(newMessage, messageBoard.firstChild);
