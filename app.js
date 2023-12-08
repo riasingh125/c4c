@@ -6,7 +6,7 @@ function postMessage() {
         const messageBoard = document.getElementById('message-board');
 
         // Create a new message div
-        const newMessage = document.createElement('div');
+        const newMessage = document.createElement('div')
 
         // Get the current date and time
         const timestamp = new Date();
