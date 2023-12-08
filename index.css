@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
 #message-board {
+    background: darkorange;
     max-height: 300px;
+    max-width: 2000px;
     overflow-y: auto;
+    font-family: 'Jost';
+    font-style: normal;
 }
